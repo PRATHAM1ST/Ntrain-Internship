@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: calc(100vw - var(--gutter-width) * 2);
+  margin: 0 var(--gutter-width);
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 100;
+}
+
+.img-logo {
+  height: var(--nav-icon-size);
+  width: var(--nav-icon-size);
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.nav-container {
+  height: fit-content;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 10px;
+}
+
+.nav-shapes-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 7px;
+}
+
+.nav-shape {
+  position: relative;
+  height: var(--nav-shape-size);
+  width: var(--nav-shape-size);
+  box-shadow: 0 0 0 var(--nav-shape-box-shadow) white;
+  transition: all var(--animation-time) ease-in-out;
+}
+
+.nav-square {
+  transform: scale(0.9);
+}
+
+.nav-circle {
+  border-radius: 100rem;
+}
+
+.nav-rhombus {
+  transform-origin: 50% 50%;
+  transform: rotate(45deg) scale(0.75);
+}
+
+.nav-plus-container {
+  position: relative;
+  min-width: var(--nav-shape-default-size);
+  min-height: var(--nav-shape-default-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  transform-origin: 50% 50%;
+  transition: all var(--animation-time) ease-in-out;
+}
+
+.nav-plus-horizontal,
+.nav-plus-vertical {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: white;
+}
+
+.nav-plus-vertical {
+  position: absolute;
+  transform-origin: 50% 50%;
+  transform: rotate(90deg);
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%);
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.nav-current-section {
+  text-transform: uppercase;
+  z-index: 1000;
+}
+
+.navigation {
+  position: fixed;
+  transform: translateX(100%);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--primary-clr);
+  transition: all var(--animation-time) ease-in-out;
+}
+
+.nav-links {
+  margin: var(--gutter-width);
+  margin-top: var(--gutter-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nav-links > a {
+  font-size: var(--h1);
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-weight: 900;
+}

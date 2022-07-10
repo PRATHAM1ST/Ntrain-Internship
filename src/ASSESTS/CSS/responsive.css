@@ -1,0 +1,143 @@
+@media only screen and (max-width: 1024px){
+    :root{
+        --gutter-width: 80px;
+        --gutter-height: 50px;
+
+        --partner-img-width: 100px;
+
+        --h1: 58px;
+        --h2: 20px;
+        --h3: 14px;
+        --h4: 8px;
+    }
+
+    li{
+        gap: 1em;
+    }
+
+    .navigation{
+        overflow: scroll;
+    }
+
+    .nav-links{
+        margin-top: calc(var(--gutter-width) * 2);
+    }
+
+    .creators-container{
+        padding: 0;
+    }
+
+    .partners-container{
+        transform: translate(calc(var(--gutter-width)*-1 - 5.5%)) rotate(-15deg);
+    }
+
+    
+   .footer{
+        min-height: fit-content;
+   }
+    
+    .footer-links{
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-logo {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+  
+    .footer-logo > img{
+        width:150px;
+    }
+    
+    .footer-extra-details {
+        margin-top: 80px;
+        margin-bottom: -80px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    :root{
+        --gutter-width: 20px;
+        --gutter-height: 100px;
+
+        --nav-icon-size: 40px;
+        --nav-shape-size: 12px;
+        --nav-shape-default-size: 12px;
+
+        --partner-img-width: 70px;
+
+        --list-img-size: 20px;
+
+        --h1: 38px;
+        --h2: 16px;
+        --h3: 10px;
+        --h4: 8px;
+    }
+
+    .img-logo{
+        transform: none;
+    }
+
+    .nav-container{
+        font-size: 8px;
+    }
+
+    .nav-shapes-container{
+        gap: 7px;
+    }
+    
+    .creator-image, .event{
+        width: 150px;
+    }
+
+    .creators-container{
+        padding: 0;
+    }
+
+    .creators-miscellaneous-links {
+        margin: 5em;
+    }
+
+    .partners-container{
+        transform: translate(calc(var(--gutter-width)*-1 - 12.5%)) rotate(-15deg);
+    }
+
+    .partners-images-container{
+        gap: 5%;
+    }
+
+    .events-header > h1{
+        gap: 30px;
+    }
+
+    .career-contact{
+        font-size: 1em;
+    }
+
+    .card-title > h2{
+        font-size: 18px;
+    }
+
+    #contact{
+        overflow: hidden;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-logo > img{
+        width:100px;
+    }
+
+    .footer-extra-details {
+        margin-top: 80px;
+        margin-bottom: -80px;
+    }
+}

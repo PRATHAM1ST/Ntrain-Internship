@@ -1,0 +1,30 @@
+:root{
+    --primary-clr: #1B1B1B;
+    --secondary-clr: #EE1DE6;
+    --ternary-clr: #454545;
+    --success-clr:#388e3c;
+    --fail-clr:#d32f2f;
+
+    --gutter-width: 100px;
+    --gutter-height: 150px;
+
+    --nav-icon-size: 50px;
+
+    --nav-shape-size: 15px;
+    --nav-shape-default-size: 15px;
+    --nav-shape-box-shadow: 1px; 
+    --nav-shape-default-box-shadow: 1px;
+    
+    --partner-img-width: 175px;
+
+    --list-img-size: 1;
+
+    --animation-time: 0.8s;
+
+    --content-title-gap: 100px;
+
+    --h1: 64px;
+    --h2: 24px;
+    --h3: 14px;
+    --h4: 10px;
+}

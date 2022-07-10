@@ -1,0 +1,32 @@
+.contact-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    z-index: -1;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: var(--content-title-gap);
+}
+
+.contact-field{
+    display: flex;
+    flex-direction: column;
+    max-width: 50ch;
+    gap: 10px;
+}
+
+.contact-field > label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.contact-field-submit{
+    font-size: 1.15em;
+    width: fit-content;
+}

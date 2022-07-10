@@ -1,0 +1,53 @@
+.creator-props{
+    position: absolute;
+    height: 600px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.female-character{
+    top: 50%;
+    left: 0;
+    transform: translate(-40%, -50%);
+}
+
+.male-character{
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.creators-container{
+    margin-top: var(--content-title-gap);
+    padding: 0 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
+.creator{
+    text-decoration: none;
+}
+
+.creator-channel-name{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.creator-image{
+    position: relative;
+    width: 250px;
+}
+
+.creator-image  > img{
+    width: 100%;
+}
+
+.creators-miscellaneous-links{
+    margin: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
