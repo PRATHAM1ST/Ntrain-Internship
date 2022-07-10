@@ -135,3 +135,7 @@ input, textarea, select{
 .error{
   background-color: var(--fail-clr);
 }
+
+.remove-underline{
+  box-shadow: none;
+}

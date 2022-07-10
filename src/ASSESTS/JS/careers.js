@@ -57,7 +57,7 @@ export default function Careers(){
                     })
                 }
             </div>
-            <button onClick={handleCareer} className='career-contact bold'><a className='bold' href="#contact">Contact US</a></button>
+            <a onClick={handleCareer} className='career-contact bold underline' href="#contact">Contact&nbsp;US&nbsp;<i class="fa-solid fa-phone-flip"></i></a>
         </div>
     )
 }

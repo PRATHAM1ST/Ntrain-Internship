@@ -63,7 +63,7 @@ export default function Creators(){
             </div>
             <div className="creators-miscellaneous-links">
                 {!allCreatorsLoaded && <button className="h2 bold" onClick={e => handleVieAll(e)}>VIEW&nbsp;ALL</button>}
-                <a onClick={handleCreator} className= "bold h2 underline" href='#contact'>JOIN&nbsp;US</a>
+                <a onClick={handleCreator} className= "bold h2 underline" href='#contact'>JOIN&nbsp;US&nbsp;<i class="fa-solid fa-phone-flip remove-underline"/></a>
             </div>
         </div>
     )

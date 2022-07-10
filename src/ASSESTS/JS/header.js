@@ -74,7 +74,7 @@ export default function Header(){
                         <div className="nav-shape nav-circle"></div>
                         <div className="nav-shape nav-rhombus"></div>
                     </div>
-                    <div className="nav-current-section animate" onChange={() => console.log(1)}>{currentSection}</div>
+                    <div className="nav-current-section" onChange={() => console.log(1)}>{currentSection}</div>
                 </div>
             </div>
     )
