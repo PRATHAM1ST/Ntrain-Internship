@@ -1,7 +1,6 @@
 import '../CSS/creators.css'
 import femaleCharacter from './IMAGES/female-character.png';
 import maleCharacter from './IMAGES/male-character.png';
-import creator from './IMAGES/creator.webp';
 import { useEffect, useState } from 'react';
 
 export default function Creators(){
@@ -26,7 +25,7 @@ export default function Creators(){
             });
             setCreatorData(creatorsArrayFetch)
         })
-    }, [])
+    }, [googleSheet])
 
     const handleCreator = ()=>{
         document.getElementById('Purpose').value = "creator";
@@ -47,7 +46,7 @@ export default function Creators(){
                 {
                     creatorData.length && creatorData.slice(0, creatorLimit).map(element=>{
                         return(
-                            <a className="creator" key={"creator-" + creatorData.indexOf(element)} href={element.channelLink} target="_blank">
+                            <a className="creator" key={"creator-" + creatorData.indexOf(element)} href={element.channelLink} target="_blank" rel="noopener noreferrer">
                                 <div className="creator-channel-name h3">{element.channelName}</div>
                                 <div className="creator-image">
                                     <img src={element.youtubeThumbnail} alt={element.channelName} title={element.channelName} />
