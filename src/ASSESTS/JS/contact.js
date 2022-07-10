@@ -8,20 +8,15 @@ export default function Contact(){
         e.preventDefault();
         const Form = document.forms["contact-form"];
         const submitButton = document.querySelector('.contact-field-submit');
-        const allFields = document.querySelectorAll('.contact-field');
-        allFields.forEach(e=>{
-            e.style.userSelect = 'none';
-        })
         submitButton.innerHTML = "Please Wait...";  
         submitButton.classList.add('wait');
-        fetch(process.env.REACT_APP_CONTACT_FORM_KEY, { method: "POST", body: new FormData(Form) })
+        var formData = new FormData(Form);
+        formData.append("Datetime", new Date().toUTCString());
+        fetch(process.env.REACT_APP_CONTACT_FORM_KEY, { method: "POST", body: formData })
         .then((response) => {
             submitButton.classList.remove('wait');
             submitButton.innerHTML = "Thank You";  
             submitButton.classList.add('success');
-            allFields.forEach(e=>{
-                e.style.userSelect = 'auto';
-            })
             setTimeout(()=>{
                 submitButton.innerHTML = "Submit";  
                 submitButton.classList.remove('success');
