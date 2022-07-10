@@ -3,16 +3,14 @@
         --gutter-width: 80px;
         --gutter-height: 50px;
 
+        --list-image-text-gap: 1em;
+
         --partner-img-width: 100px;
 
         --h1: 58px;
         --h2: 20px;
         --h3: 14px;
         --h4: 8px;
-    }
-
-    li{
-        gap: 1em;
     }
 
     .navigation{
@@ -60,7 +58,7 @@
     }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 560px){
     :root{
         --gutter-width: 20px;
         --gutter-height: 100px;
@@ -89,6 +87,10 @@
 
     .nav-shapes-container{
         gap: 7px;
+    }
+
+    .nav-links {
+        margin-top: calc(var(--gutter-height) * 1.5);
     }
     
     .creator-image, .event{

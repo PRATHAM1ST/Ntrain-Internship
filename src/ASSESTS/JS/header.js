@@ -17,6 +17,7 @@ export default function Header(){
         const sections = document.querySelectorAll('.section');
         document.addEventListener('scroll', e => {
             var scrollPos =  window.pageYOffset
+            console.log(scrollPos);
             sections.forEach(e=>{
                 if(scrollPos >= (e.offsetTop - e.clientHeight / 3)){
                     setCurrentSection(e.id)
@@ -24,7 +25,7 @@ export default function Header(){
                 }
             })    
         })
-
+        
         if(plusContainer){
             if(navigationVisisble){
                 document.body.style.overflow = "hidden";
@@ -47,10 +48,10 @@ export default function Header(){
             }
         }
         
-    }, [navigationVisisble, currentSection, savedCurrentSection, docStyle, plusContainer, defaultBoxShadow, defaultShapeSize, navigationContainer])
+    }, [navigationVisisble])
     
     return(
-            <div className="header">
+            <div className="header" id="her">
                 <div className="navigation">
                     <div className="nav-links">
                         <a onClick={()=>setNavigationVisible(false)} className="orbitron" href="#home">Home</a>

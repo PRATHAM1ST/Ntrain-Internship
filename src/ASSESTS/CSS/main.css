@@ -71,19 +71,21 @@ h3, .h3 {
 li {
   position: relative;
   list-style: none;
-  display: flex;
-  gap: 3em;
   margin: 1.5em 0;
+  margin-left: calc(var(--list-img-size) + var(--list-image-text-gap));
 }
 
 li::before {
   content: "";
-  display:table-row;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: calc(var(--list-img-size)*-1 - var(--list-image-text-gap));
   height: var(--list-img-size);
   width: var(--list-img-size);
   background-image: url("../JS/IMAGES/bullet-point.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 button, button > *{
@@ -93,6 +95,7 @@ button, button > *{
   padding: 1em 2em;
   text-transform: uppercase;
   transition: var(--animation-time) ease-in-out;
+  border: none;
 }
 
 a, a > *{

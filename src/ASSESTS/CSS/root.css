@@ -17,7 +17,8 @@
     
     --partner-img-width: 175px;
 
-    --list-img-size: 1;
+    --list-img-size: 25px;
+    --list-image-text-gap: 3em;
 
     --animation-time: 0.8s;
 

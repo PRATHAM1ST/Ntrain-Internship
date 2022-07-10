@@ -5,9 +5,10 @@ import { useEffect, useState } from 'react';
 
 export default function Creators(){
 
-    const [creatorData, setCreatorData] = useState([])
-    const [creatorLimit, setCreatorLimit] = useState(4)
-    const googleSheet = process.env.REACT_APP_CREATORS_KEY
+    const [creatorData, setCreatorData] = useState([]);
+    const [creatorLimit, setCreatorLimit] = useState();
+    const [allCreatorsLoaded, setAllCreatorLoaded] = useState(false);
+    const googleSheet = process.env.REACT_APP_CREATORS_KEY;
 
     useEffect(()=>{
         fetch(googleSheet)
@@ -23,7 +24,10 @@ export default function Creators(){
                     channelLink: element.c[2].v
                 })
             });
-            setCreatorData(creatorsArrayFetch)
+            setCreatorData(creatorsArrayFetch);
+            setCreatorLimit(8 < creatorsArrayFetch.length ? 8 : creatorsArrayFetch.length);
+            console.log(creatorLimit, creatorsArrayFetch);
+            setAllCreatorLoaded(creatorLimit === creatorsArrayFetch.length);
         })
     }, [googleSheet])
 
@@ -44,7 +48,7 @@ export default function Creators(){
             <img className="creator-props male-character" src={maleCharacter} alt='' />
             <div className="creators-container">
                 {
-                    creatorData.length && creatorData.slice(0, creatorLimit).map(element=>{
+                    creatorData.length !== 0 && creatorData.slice(0, creatorLimit).map(element=>{
                         return(
                             <a className="creator" key={"creator-" + creatorData.indexOf(element)} href={element.channelLink} target="_blank" rel="noopener noreferrer">
                                 <div className="creator-channel-name h3">{element.channelName}</div>
@@ -58,7 +62,7 @@ export default function Creators(){
                 
             </div>
             <div className="creators-miscellaneous-links">
-                <button className="h3 bold" onClick={e => handleVieAll(e)}>VIEW&nbsp;ALL</button>
+                {!allCreatorsLoaded && <button className="h3 bold" onClick={e => handleVieAll(e)}>VIEW&nbsp;ALL</button>}
                 <a onClick={handleCreator} className= "bold underline" href='#contact'>JOIN&nbsp;US</a>
             </div>
         </div>
