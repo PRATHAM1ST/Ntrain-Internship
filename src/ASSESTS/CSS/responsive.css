@@ -78,7 +78,7 @@
     }
 
     .img-logo{
-        transform: none;
+        transform: translate(0);
     }
 
     .nav-container{

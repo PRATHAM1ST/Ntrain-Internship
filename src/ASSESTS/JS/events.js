@@ -33,7 +33,7 @@ export default function Events(){
             
         }
         else{
-            document.querySelector('.toggle-circle').style.left = "60%";
+            document.querySelector('.toggle-circle').style.left = "55%";
             document.querySelector('.event-type > h1').innerHTML = "OFFLINE";
             fetching(offlineGoogleSheet);
         }

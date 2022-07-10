@@ -8,7 +8,7 @@
     cursor: pointer;
     position: relative;
     height: 0.75em;
-    width: 2.5em;
+    width: 2em;
     border: 2px solid var(--secondary-clr);
     border-radius: 100rem;
     padding: 0.5%;

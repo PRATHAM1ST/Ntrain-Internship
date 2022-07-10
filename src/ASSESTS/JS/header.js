@@ -17,7 +17,6 @@ export default function Header(){
         const sections = document.querySelectorAll('.section');
         document.addEventListener('scroll', e => {
             var scrollPos =  window.pageYOffset
-            console.log(scrollPos);
             sections.forEach(e=>{
                 if(scrollPos >= (e.offsetTop - e.clientHeight / 3)){
                     setCurrentSection(e.id)

@@ -25,9 +25,9 @@ export default function Creators(){
                 })
             });
             setCreatorData(creatorsArrayFetch);
-            setCreatorLimit(8 < creatorsArrayFetch.length ? 8 : creatorsArrayFetch.length);
-            console.log(creatorLimit, creatorsArrayFetch);
-            setAllCreatorLoaded(creatorLimit === creatorsArrayFetch.length);
+            var limit = 8 < creatorsArrayFetch.length ? 8 : creatorsArrayFetch.length;
+            setCreatorLimit(limit);
+            setAllCreatorLoaded(limit === creatorsArrayFetch.length);
         })
     }, [googleSheet])
 
@@ -62,8 +62,8 @@ export default function Creators(){
                 
             </div>
             <div className="creators-miscellaneous-links">
-                {!allCreatorsLoaded && <button className="h3 bold" onClick={e => handleVieAll(e)}>VIEW&nbsp;ALL</button>}
-                <a onClick={handleCreator} className= "bold underline" href='#contact'>JOIN&nbsp;US</a>
+                {!allCreatorsLoaded && <button className="h2 bold" onClick={e => handleVieAll(e)}>VIEW&nbsp;ALL</button>}
+                <a onClick={handleCreator} className= "bold h2 underline" href='#contact'>JOIN&nbsp;US</a>
             </div>
         </div>
     )
