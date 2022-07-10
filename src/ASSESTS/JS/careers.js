@@ -20,7 +20,7 @@ export default function Careers(){
             });
             setCareerCardData(cardArray)
         })
-    }, [])
+    }, [googleSheet])
 
     const handleCareer = ()=>{
         document.getElementById('Purpose').value = "career";

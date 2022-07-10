@@ -47,7 +47,7 @@ export default function Header(){
             }
         }
         
-    }, [navigationVisisble])
+    }, [navigationVisisble, currentSection, savedCurrentSection, docStyle, plusContainer, defaultBoxShadow, defaultShapeSize, navigationContainer])
     
     return(
             <div className="header">

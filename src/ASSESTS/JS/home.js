@@ -4,7 +4,7 @@ import hero from './IMAGES/hero.jpg'
 export default function Home(){
     return(
     <div className='section' id='home'>
-        <img className='img-hero' alt='hero-image' src={hero} />
+        <img className='img-hero' alt='hero' src={hero}/>
         <div className='gradient-hero' />
         <div className='intro'>
             <h2 className='uppercase'>welcome</h2>

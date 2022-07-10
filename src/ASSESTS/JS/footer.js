@@ -10,13 +10,13 @@ export default function Footer(){
                 </a>
                 <div className='footer-social'>
                     <h2 className='orbitron'>Social</h2>
-                    <a href='https://www.youtube.com/channel/UCmtkqGjc0xHTZbgGqHdpQeQ/' target="_blank">
+                    <a href='https://www.youtube.com/channel/UCmtkqGjc0xHTZbgGqHdpQeQ/' target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-youtube"></i> Youtube
                     </a>
-                    <a href='https://www.instagram.com/ntraingaming/' target="_blank">
+                    <a href='https://www.instagram.com/ntraingaming/' target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-instagram"></i> Instagram
                     </a>
-                    <a href='https://www.facebook.com/Ntrain-102593739142319/' target="_blank">
+                    <a href='https://www.facebook.com/Ntrain-102593739142319/' target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-facebook-square"></i> Facebook
                     </a>
                     <a href='mailto:care@ntrain.in'>
