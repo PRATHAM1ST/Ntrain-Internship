@@ -37,7 +37,6 @@ export default function Creators(){
 
     const handleVieAll = (e)=>{
         setCreatorLimit(creatorData.length)
-        console.log(e)
         e.target.style.display = "none"
     }
 

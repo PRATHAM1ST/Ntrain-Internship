@@ -50,7 +50,7 @@ export default function Contact(){
                 </div>
                 <div className="contact-field">
                     <label htmlFor="Message">Message</label>
-                    <textarea name="Message" type="text" rows={10}/>
+                    <textarea name="Message" type="text" rows={10} required/>
                 </div>
                 <div className="contact-field">
                     <label htmlFor="Purpose">Purpose</label>
@@ -59,7 +59,7 @@ export default function Contact(){
                         <option value="creator">Join as a Creator</option>
                         <option value="business">Business Inquiries</option>
                         <option value="career">Career Inquiries</option>
-                        <option value="other">Other</option>
+                        <option value="other">Others</option>
                     </select>
                 </div>
                 <button type="submit" data-wait="please wait" className="contact-field-submit">Submit</button>

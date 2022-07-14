@@ -75,12 +75,13 @@ export default function Events(){
             }
             { 
                 !eventData.length && <div className='no-content'>
-                    <h1>LOADING SOON...</h1>
+                    <h1>STAY TUNED</h1>
                     <div className='youtube-link'>
                         <h3>
-                            <a href='https://www.youtube.com/channel/UCmtkqGjc0xHTZbgGqHdpQeQ' className='underline'>
-                                <i className="fa-brands fa-youtube"></i> Youtube
-                        </a> TILL THEN CHECKOUT</h3>
+                            On our <a href='https://www.youtube.com/channel/UCmtkqGjc0xHTZbgGqHdpQeQ' className='underline'>
+                                <i className="fa-brands fa-youtube"></i> YouTube Channel
+                            </a> for exciting events
+                        </h3>
                     </div>
                 </div>
             }
